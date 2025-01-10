@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better-Github</title>
+    <style>
+        /* Global styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Container styling */
+        .container {
+            text-align: center;
+            background: #1f1f1f;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #4caf50;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #E0E0E0;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #333;
+            border-radius: 5px;
+            background-color: #333;
+            color: #E0E0E0;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #4caf50;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Background image */
+        body {
+            background-color: black;
+            background-size: cover;
+        }
+
+        /* Link styling */
+        a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Better-Github</h1>
+        <h3>Enter your GitHub username to see an enhanced GitHub view using my API, or view an example with my username.</h3>
+        <input type="text" id="usernameInput" placeholder="Enter GitHub username">
+        <a href="#" onclick="openProfile()"><button>Open Better-Github Profile</button></a>
+        <br><br><br>
+        <button onclick="window.location.href = `./api.html?username=a-TechyBoy`;">Open Better-Github Profile with my profile as example</button>
+    </div>
+
+    <script>
+        function openProfile() {
+            const username = document.getElementById('usernameInput').value;
+            if (username) {
+                window.location.href = `./api.html?username=${username}`;
+            } else {
+                alert("Please enter a GitHub username!");
+            }
+        }
+    </script>
+</body>
+</html>
